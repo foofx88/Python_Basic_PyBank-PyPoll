@@ -1,5 +1,4 @@
 import os
-import sys
 import csv
 
 dirname = os.path.dirname(__file__)
@@ -47,7 +46,7 @@ with open(budgetdata_csv, 'r') as csvfile:
 
 
 # to print the result onto the analysis folder
-out = open("C:/Users/bluec/python-challenge/PyBank/analysis/test.txt", "w")
+out = open("C:/Users/bluec/python-challenge/PyBank/analysis/output.txt", "w")
 out.write(f'Financial Analysis\n')    
 out.write(f'------------------------\n')
 out.write(f'Total Months: {months}\n')
