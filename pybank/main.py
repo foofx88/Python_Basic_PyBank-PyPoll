@@ -1,4 +1,5 @@
-import os.path
+import os
+import sys
 import csv
 
 dirname = os.path.dirname(__file__)
@@ -35,15 +36,27 @@ with open(budgetdata_csv, 'r') as csvfile:
             grtst_loss = int(row[1])
             min_month = str(row[0])                 #to get the coresponding month
 
-                                                    # to print the result onto the analysis folder
-f = open("C:/Users/bluec/python-challenge/PyBank/analysis/test.txt", "w")
-f.write(f'Financial Analysis\n')    
-f.write(f'------------------------\n')
-f.write(f'Total Months: {months}\n')
-f.write(f'Total: ${total}\n')
-f.write(f'Average Change: ${ave_change}\n')
-f.write(f'Greatest Increase in Profits: {max_month} (${grtst_profit})\n')
-f.write(f'Greatest Decrease in Profits: {min_month} (${grtst_loss})\n')    
-f.close()    
 
+    print(f'Financial Analysis')    
+    print(f'------------------------')
+    print(f'Total Months: {months}')
+    print(f'Total: ${total}')
+    print(f'Average Change: ${ave_change}')
+    print(f'Greatest Increase in Profits: {max_month} (${grtst_profit})')
+    print(f'Greatest Decrease in Profits: {min_month} (${grtst_loss})')   
+
+
+# to print the result onto the analysis folder
+out = open("C:/Users/bluec/python-challenge/PyBank/analysis/test.txt", "w")
+out.write(f'Financial Analysis\n')    
+out.write(f'------------------------\n')
+out.write(f'Total Months: {months}\n')
+out.write(f'Total: ${total}\n')
+out.write(f'Average Change: ${ave_change}\n')
+out.write(f'Greatest Increase in Profits: {max_month} (${grtst_profit})\n')
+out.write(f'Greatest Decrease in Profits: {min_month} (${grtst_loss})\n')
+out.close()
+
+#initially wanted to produce output in .write using a function however it is only able to output str not function.
+#hence the lengthy repetitive code.
         
