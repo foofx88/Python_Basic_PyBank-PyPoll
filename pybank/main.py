@@ -45,7 +45,7 @@ with open(budgetdata_csv, 'r') as csvfile:
     print(f'Greatest Decrease in Profits: {min_month} (${grtst_loss})')   
 
 
-# to print the result onto the analysis folder
+#the following is to output the result to a text file - output.txt
 out = open("C:/Users/bluec/python-challenge/PyBank/analysis/output.txt", "w")
 out.write(f'Financial Analysis\n')    
 out.write(f'------------------------\n')

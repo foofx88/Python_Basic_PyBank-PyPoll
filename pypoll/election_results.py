@@ -21,7 +21,7 @@ with open(elecdata_csv, 'r') as csvfile:
         if row[2] not in candidates:                #and get unique individual candidates in the csv 
             candidates.append(row[2])
 
-        votes.append(row[2])                        #adds number of votes accodingly, without this the next loop won't work
+        votes.append(row[2])                        #adds number of votes to individual to be used in the next loop
 
     for individual in candidates:                   #second loop to count all votes for each individual
         candidate_votes.append(votes.count(individual))
@@ -34,7 +34,7 @@ winner = candidates[candidate_votes.index(max(candidate_votes))]    #get the win
 print(f'Election Results')
 print(f'---------------------')
 print(f'Total Votes: {total_votes}')
-for i in range (len(candidates)):
+for i in range (len(candidates)):                   
     print(f'{candidates[i]}: {candidate_vote_perc[i]}% ({candidate_votes[i]})')
 print(f'---------------------')
 print(f'Winner: {winner} ')
