@@ -44,16 +44,13 @@ with open(budgetdata_csv, 'r') as csvfile:
     print(f'Greatest Increase in Profits: {max_month} (${grtst_profit})')
     print(f'Greatest Decrease in Profits: {min_month} (${grtst_loss})')   
 
+    text_output = "Financial Analysis \n----------------------- \n Total Months: {} \n Total: ${} \n Averange Change: {} \n Greatest Increase in Profits: {} (${}) \n Greatest Decrease in Profits: {} (${}) \n".format(months, total, ave_change,max_month, grtst_profit,min_month, grtst_loss)
+    # used the above long boy to shorten the output below, otherwise there would be repeating out.write
+
 
 #the following is to output the result to a text file - output.txt
 out = open("C:/Users/bluec/python-challenge/PyBank/analysis/output.txt", "w")
-out.write(f'Financial Analysis\n')    
-out.write(f'------------------------\n')
-out.write(f'Total Months: {months}\n')
-out.write(f'Total: ${total}\n')
-out.write(f'Average Change: ${ave_change}\n')
-out.write(f'Greatest Increase in Profits: {max_month} (${grtst_profit})\n')
-out.write(f'Greatest Decrease in Profits: {min_month} (${grtst_loss})\n')
+out.write(text_output)
 out.close()
 
 #initially wanted to produce output in .write using a function however it is only able to output str not function.

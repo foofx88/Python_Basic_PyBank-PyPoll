@@ -40,6 +40,7 @@ print(f'---------------------')
 print(f'Winner: {winner} ')
 
 #the following is to output the result to a text file - output.txt
+#can also use one variable with to represent the output, however in this case, I will  leave it as is
 out = open("C:/Users/bluec/python-challenge/PyPoll/analysis/output.txt", "w")
 out.write(f'Election Results\n')
 out.write(f'---------------------\n')
